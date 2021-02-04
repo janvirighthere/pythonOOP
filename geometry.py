@@ -16,10 +16,8 @@ class Line():
         x1, y1 = self.coor1
         x2, y2 = self.coor2
 
-        m = (y2 -y1)/(x2 -x1)
-        return m
-
-
+        return (y2 -y1)/(x2 -x1)
+      
 class Cylinder():
 
   
@@ -35,6 +33,3 @@ class Cylinder():
         return round((2*pi*self.radius*self.height) + (2*pi*self.radius**2), 2)
 
 
-c = Cylinder(2, 3)
-print(c.volume())
-print(c.area())
