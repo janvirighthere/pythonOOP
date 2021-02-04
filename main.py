@@ -1,26 +1,34 @@
 class Animal():
     
-    def __init__(self):
-        print("Animal Created")
+    def __init__(self, name):
+        self.name = name
     
-    def whom_am_i(self):
-        print("I am an animal")
-    
-    def eat(self):
-        print("I am eating")
+    def speak(self):
+        raise NotImplementedError("Subclass must implement this abstract method")
 
 class Dog(Animal):
 
-    def __init__(self):
-        super().__init__()
-        print("Dog Created")
+    def speak(self):
+        return self.name + " says woof!"
 
-    def whom_am_i(self):
-        print("I am a dog")
+
+# Polymorphism 
+
+class Cat(Animal):
+
+    def speak(self):
+        return self.name + " says meow!"
     
-    def eat(self):
-        print("I am a dog and eating")
 
-dog = Dog()
-dog.eat()
-dog.whom_am_i()
+biggie = Dog("biggie")
+felix = Cat("felix")
+
+def pet_speak(pet):
+    print(pet.speak())
+
+pet_speak(felix)
+pet_speak(biggie)
+
+
+
+
