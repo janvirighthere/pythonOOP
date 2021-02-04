@@ -1,17 +1,16 @@
-class Dog():
+class Circle():
 
-    species = 'mammal'
+    PI = 3.14
 
-    def __init__(self, breed, name, spots):
-        self.breed = breed
-        self.name = name
-        self.spots = spots
+    def __init__(self,radius=1):
+        self.radius = radius
 
-    def bark(self):
-        print(f"woof my name is {self.name}.")
+    def get_circumference(self):
+        return self.radius * Circle.PI * 2
+
+    def get_area(self):
+        return self.radius * self.radius * Circle.PI
     
-
-    
-
-d = Dog(breed="Lab", name="KIA", spots=False)
-d.bark()
+c = Circle(30)
+print(c.get_circumference())
+print(c.get_area())
