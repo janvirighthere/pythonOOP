@@ -15,6 +15,3 @@ class Book():
     def __del__(self):
         print("Book was deleted")
 
-b = Book("Pythons rocks", "janvier", 3080)
-del(b)
-print(b)
